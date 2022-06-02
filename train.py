@@ -97,7 +97,7 @@ for fold, (train_ids, test_ids) in enumerate(kfold):
         epoch_start_time = time.time()
         train_epoch_loss = AverageMeter()
         model.train()
-        for i, (inputs, labels) in enumerate(tqdm(trainloader)):
+        for i, (inputs, labels) in enumerate(tqdm(trainloader), 0):
             inputs, labels = inputs.to(device), labels.to(device)
             outputs = model(inputs)
 
@@ -113,7 +113,7 @@ for fold, (train_ids, test_ids) in enumerate(kfold):
         val_epoch_metric = MetricMeter(label=Train['CLASS'])
 
         model.eval()
-        for i, (inputs, labels) in enumerate(tqdm(testloader)):
+        for i, (inputs, labels) in enumerate(testloader):
 
             inputs, labels = inputs.to(device), labels.to(device)
 
@@ -130,17 +130,18 @@ for fold, (train_ids, test_ids) in enumerate(kfold):
         if val_epoch_metric.o_acc >= val_best_accuracy:
             best_epoch_acc = epoch
             val_best_accuracy = val_epoch_metric.o_acc
-            torch.save(model.state_dict(), model_dir + f'{MODEL}_fold{fold + 1}_best_acc.pth')
+            torch.save(model.state_dict(), os.path.join(model_dir, f'{MODEL}_fold{fold + 1}_best_acc.pth'))
 
         print("[fold %d epoch %d Acc: %.4f --- best_epoch %d Best_Acc %.4f]" % (
                 fold+1, epoch, val_epoch_metric.o_acc, best_epoch_acc, val_best_accuracy))
 
         writer.add_scalar('val/accuracy', val_epoch_metric.o_acc, epoch)
-        writer.add_scalar('val/loss', val_epoch_loss, epoch)
+        writer.add_scalar('val/loss', val_epoch_loss.avg, epoch)
 
-    print("------------------------------------------------------------------")
-    print("Epoch: {}\tTime: {:.4f}\tLoss: {:.4f}".format(epoch, time.time() - epoch_start_time, train_epoch_loss.avg))
-    print("------------------------------------------------------------------")
+        print("------------------------------------------------------------------")
+        print(
+            "Epoch: {}\tTime: {:.4f}\tLoss: {:.4f}".format(epoch, time.time() - epoch_start_time, train_epoch_loss.avg))
+        print("------------------------------------------------------------------")
     folds_val_best_accuracy.append(val_best_accuracy)
     writer.add_scalar('train/loss', train_epoch_loss, epoch)
 writer.close()
