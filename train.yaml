@@ -1,0 +1,23 @@
+###############################
+# Hyper-parameters for training
+###############################
+PATH:
+  IMG_DIR: './dataset/new_dataset/'
+  CSV_DIR: './dataset/new_dataset/label.csv'
+  RESULT_DIR: './checkpoints/'
+
+MODEL: 'vit' # vit, beit, convnext, swin
+
+# Optimization arguments.
+OPTIM:
+  TRAIN_BATCH: 8
+  VAL_BATCH: 8
+  EPOCHS: 50
+  LR: 1e-4
+
+TRAINING:
+  CLASS: 219
+  IMG_EACH_CLASS: 80
+  FOLD: 1
+  IMG_DIR: 'D:/NCHU/thesis/Ablation_study/Ablation_code/dataset/train'   # path to training data
+  SAVE_DIR: './checkpoints'           # path to save models and images
