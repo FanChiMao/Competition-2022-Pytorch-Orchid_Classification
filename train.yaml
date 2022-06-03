@@ -10,12 +10,14 @@ MODEL: 'vit' # vit, beit, convnext, swin
 
 # Optimization arguments.
 OPTIM:
-  TRAIN_BATCH: 1
-  VAL_BATCH: 1
-  EPOCHS: 50
-  LR: 1e-4
+  TRAIN_BATCH: 8
+  VAL_BATCH: 8
+  EPOCHS: 100
+  LR_INIT: 1e-4
+  LR_MIN: 1e-5
 
 TRAINING:
   CLASS: 219
   IMG_EACH_CLASS: 80
   FOLD: 1
+  VAL_AFTER_EVERY: 1
