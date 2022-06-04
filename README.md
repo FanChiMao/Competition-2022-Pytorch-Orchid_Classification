@@ -1,4 +1,5 @@
-# Competition-2022-Pytorch-Orchid_Classification: TEAM_482  
+# Competition-2022-Pytorch-Orchid_Classification  
+<-TEAM_482->  
 ## [Chi-Mao Fan](https://github.com/FanChiMao), [Yu-Chen Su](https://github.com/Modovado), [Wei-siang Liao](https://github.com/zxc741852741)  
 <a href="[https://imgur.com/mc4Di1O](https://tbrain.trendmicro.com.tw/Competitions/Details/20)"><img src="https://i.imgur.com/mc4Di1O.png" title="source: imgur.com" /></a>  
 
