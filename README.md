@@ -49,15 +49,14 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 ## Ensemble strategy  
 <table>
   <tr>
-    <td> <img src = "https://i.imgur.com/FPR0WoU.png" width="400"> </td>
-    <td> <img src = "https://i.imgur.com/xMVL6N1.png" width="400"> </td>
-    <td> <img src = "https://i.imgur.com/xMVL6N1.png" width="400"> </td>
+    <td> <img src = "https://i.imgur.com/g4GREcK.jpg" width="400"> </td>
+    <td> <img src = "https://i.imgur.com/WA4jq5G.jpg" width="400"> </td>
+    <td> <img src = "https://i.imgur.com/wlnXdpx.jpg" width="400"> </td>
   </tr>
   <tr>
-    <td><p align="center"><b>Half Wavelet Attention Block (HWAB)</b></p></td>
-    <td><p align="center"> <b>Resizing Block (Pixel Shuffle)</b></p></td>
-    <td><p align="center"> <b>Resizing Block (Pixel Shuffle)</b></p></td>
+    <td><p align="center"><b>Average ensemble</b></p></td>
+    <td><p align="center"> <b>Traditional ensemble</b></p></td>
+    <td><p align="center"> <b>Resnet ensemble</b></p></td>
   </tr>
 </table>
-
 
