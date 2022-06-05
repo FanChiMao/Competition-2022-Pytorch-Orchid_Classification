@@ -29,5 +29,6 @@ conda create -n pytorch python=3.8
 conda activate pytorch  
 conda install pytorch=1.8 torchvision cudatoolkit=10.2 -c pytorch  
 conda install -c conda-forge tensorboardx
+pip install git+https://github.com/rwightman/pytorch-image-models.git
 pip install -r requirements.txt
 ```
