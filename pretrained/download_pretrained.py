@@ -26,12 +26,12 @@ def main():
         bar.update(1) #9
         wget.download(project_url + '/releases/download/v0.0/volo.pth')
         bar.update(1) #10
-        wget.download(project_url + '/releases/download/v0.0/resmlp.pth')
-        bar.update(1) #11
-        wget.download(project_url + '/releases/download/v0.0/')
-        bar.update(1) #12
-        wget.download(project_url + '/releases/download/v0.0/')
-        bar.update(1) #13
+#         wget.download(project_url + '/releases/download/v0.0/resmlp.pth')
+#         bar.update(1) #11
+#         wget.download(project_url + '/releases/download/v0.0/')
+#         bar.update(1) #12
+#         wget.download(project_url + '/releases/download/v0.0/')
+#         bar.update(1) #13
 
 if __name__ == '__main__':
     print(f'Start downloading pretrained models from {project_url}/releases/tag/v0.0')
