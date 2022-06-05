@@ -32,3 +32,9 @@ conda install -c conda-forge tensorboardx
 pip install git+https://github.com/rwightman/pytorch-image-models.git
 pip install -r requirements.txt
 ```
+
+## Dataset  
+You can refer the [README.md](dataset/README.md) to prepare the dataset.  
+
+## Train each classifier  
+Set hyperparameters and revelent training path in [train.yaml](train.yaml) and simply run [train.py](train.py).  
