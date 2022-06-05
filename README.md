@@ -34,7 +34,30 @@ pip install -r requirements.txt
 ```
 
 ## Dataset  
-You can refer the [README.md](dataset/README.md) to prepare the dataset.  
+You can refer the [**README.md**](dataset/README.md) to prepare the dataset.  
 
 ## Train each classifier  
-Set hyperparameters and revelent training path in [train.yaml](train.yaml) and simply run [train.py](train.py).  
+Set hyperparameters and revelent training path in [**train.yaml**](train.yaml) and simply run [**train.py**](train.py).  
+
+## Predict via each trained classifier  
+You can download our pretrained model from [**pretrained**](./pretrained).  
+To predict the orchid images by single classifier, see [**predict.py**](predict.py) and run:  
+```
+python predict.py --model model_name --input_dir images_folder_path --result_dir save_csv_here --weights path_to_models
+```
+
+## Ensemble strategy  
+<table>
+  <tr>
+    <td> <img src = "https://i.imgur.com/FPR0WoU.png" width="400"> </td>
+    <td> <img src = "https://i.imgur.com/xMVL6N1.png" width="400"> </td>
+    <td> <img src = "https://i.imgur.com/xMVL6N1.png" width="400"> </td>
+  </tr>
+  <tr>
+    <td><p align="center"><b>Half Wavelet Attention Block (HWAB)</b></p></td>
+    <td><p align="center"> <b>Resizing Block (Pixel Shuffle)</b></p></td>
+    <td><p align="center"> <b>Resizing Block (Pixel Shuffle)</b></p></td>
+  </tr>
+</table>
+
+
