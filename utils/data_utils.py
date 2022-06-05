@@ -3,6 +3,8 @@ import pandas as pd
 import os
 from PIL import Image
 import numpy as np
+from torch.utils.data import Dataset, DataLoader, Subset
+from .model_utils import transform_size
 
 class CustomDataset(Dataset):
 
@@ -57,3 +59,12 @@ def dataset_indexes(num_classes, images_each_class, split=10, fold=1, shuffle=No
         output_list.append([train_index_list, test_index_list])
 
     return output_list
+
+def set2loader(csv_path, images_folder, size: int, train_ids, test_ids, train_batch_size, test_batch_size):
+    dataset = CustomDataset(csv_path, images_folder, transform=transform_size(size))
+    train_subset = Subset(dataset, train_ids)
+    test_subset = Subset(dataset, test_ids)
+    trainloader = DataLoader(train_subset, batch_size=train_batch_size, pin_memory=True)
+    testloader = DataLoader(test_subset, batch_size=test_batch_size, pin_memory=True)
+
+    return trainloader, testloader
