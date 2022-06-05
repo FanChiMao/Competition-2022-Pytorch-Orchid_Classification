@@ -1,0 +1,21 @@
+##################################
+# Setting for multiple classifier
+##################################
+PATH:
+  INPUT_DIR: 'D:/PycharmProjects/orchid/dataset/dataset_category_split/test/0'
+  RESULT_DIR: './results'
+
+MODEL: # ['vit', 'beit', 'swin', 'convnext', 'volo', 'resmlp', 'xcit', 'ecaresnet50', 'ecaresnet269', 'dmnfnet', 'regnet', 'efficient']
+  CLASSIFIER_1: ['dmnfnet', 256, 'pretrained/dmnfnet.pth']
+  CLASSIFIER_2: ['ecaresnet50', 320, 'pretrained/ecaresnet_50.pth']
+  CLASSIFIER_3: ['regnet', 320, 'pretrained/regnet.pth']
+  CLASSIFIER_4: ['beit', 384, 'pretrained/beit_1.pth']
+  CLASSIFIER_5: ['beit', 384, 'pretrained/beit_2.pth']
+  CLASSIFIER_6: ['volo', 384, 'pretrained/volo.pth']
+  CLASSIFIER_7: ['swin', 384, 'pretrained/swin.pth']
+  CLASSIFIER_8: ['vit', 384, 'pretrained/vit.pth']
+  CLASSIFIER_9: ['convnext', 384, 'pretrained/convnext.pth']
+  CLASSIFIER_10: ['efficient', 480, 'pretrained/efficient.pth']
+
+  # CLASSIFIER_11: ['resmlp', 224, 'pretrained/resmlp.pth']
+
