@@ -60,3 +60,11 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
   </tr>
 </table>
 
+## Reference  
+- https://github.com/rwightman/pytorch-image-models.git
+
+
+## Contact us  
+- Chi-Mao Fan: qaz5517359@gmail.com  
+- Yu-Chen Su:  
+- Wei-siang Liao  
