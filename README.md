@@ -1,10 +1,10 @@
 # Competition-2022-Pytorch-Orchid_Classification  
 ## TEAM_482: [Chi-Mao Fan](https://github.com/FanChiMao), [Yu-Chen Su](https://github.com/Modovado), [Wei-Hsiang Liao](https://github.com/zxc741852741)  
-[![download](https://img.shields.io/github/downloads/FanChiMao/Competition-2022-Pytorch-Orchid_Classification/total)](https://github.com/FanChiMao/Competition-2022-Pytorch-Orchid_Classification/releases/tag/v0.0) ![visitors](https://visitor-badge.glitch.me/badge?page_id=FanChiMao/Orchid_AICUP) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TAlJB2QhbgE6fW-a3qph8bJr0blbQvzN?usp=sharing) [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/52Hz/Orchid_classification_AICUP)  
-<a href="[https://imgur.com/mc4Di1O](https://tbrain.trendmicro.com.tw/Competitions/Details/20)"><img src="https://i.imgur.com/mc4Di1O.png" title="source: imgur.com" /></a>  
 
 - [**尋找花中君子－蘭花種類辨識及分類**](https://tbrain.trendmicro.com.tw/Competitions/Details/20)  
+<a href="[https://imgur.com/mc4Di1O](https://tbrain.trendmicro.com.tw/Competitions/Details/20)"><img src="https://i.imgur.com/mc4Di1O.png" title="source: imgur.com" /></a>  
 
+[![download](https://img.shields.io/github/downloads/FanChiMao/Competition-2022-Pytorch-Orchid_Classification/total)](https://github.com/FanChiMao/Competition-2022-Pytorch-Orchid_Classification/releases/tag/v0.0) ![visitors](https://visitor-badge.glitch.me/badge?page_id=FanChiMao/Orchid_AICUP) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TAlJB2QhbgE6fW-a3qph8bJr0blbQvzN?usp=sharing) [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/52Hz/Orchid_classification_AICUP)  
 
 ## Installation
 The model is built in PyTorch 1.8.0 and tested on Windows10 environment  
