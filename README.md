@@ -60,6 +60,27 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
   </tr>
 </table>
 
+
+## Predict result  
+- Public dataset:  
+    - Best score 
+    
+        |                     |  Accuracy    |
+        | ------------------- | :----------: |
+        | Best result         |      0.900077|
+  
+    - Leaderboard  
+    ![image](https://i.imgur.com/rD35JEl.png)  
+
+- Private result: 
+    - Best score 
+    
+        |                     |  Accuracy    |
+        | ------------------- | :----------: |
+        | Best result         |     |
+  
+    - Leaderboard  
+    
 ## Reference  
 - https://github.com/rwightman/pytorch-image-models.git
 
