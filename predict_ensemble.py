@@ -43,4 +43,4 @@ if __name__ == '__main__':
         result.append([image_name, class_predict])
 
     write_csv(data=result, csv_path=out_dir, save_name='submission')
-    print(f'finish predicting! csv result is saved in {out_dir}')
+    print(f'==> Finish predicting!\n Csv predict result is saved in {out_dir}')
