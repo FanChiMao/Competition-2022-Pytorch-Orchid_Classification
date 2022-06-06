@@ -55,8 +55,8 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
   </tr>
   <tr>
     <td><p align="center"><b>Average ensemble</b></p></td>
-    <td><p align="center"> <b>Traditional ensemble</b></p></td>
-    <td><p align="center"> <b>Resnet ensemble</b></p></td>
+    <td><p align="center"><b>Traditional ensemble</b></p></td>
+    <td><p align="center"><b>Resnet ensemble</b></p></td>
   </tr>
 </table>
 
