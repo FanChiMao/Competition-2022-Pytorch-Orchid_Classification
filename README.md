@@ -70,13 +70,13 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 <details>  
 <summary>Training tree...</summary>   
   
-    - Best score 
+  - Best score 
     
         |                     |  Accuracy    |
         | ------------------- | :----------: |
         | Best result         |      0.900077|
   
-    - Leaderboard  
+  - Leaderboard  
     <img src = "https://i.imgur.com/rD35JEl.png" width="400">  
 
 - Private result: 
