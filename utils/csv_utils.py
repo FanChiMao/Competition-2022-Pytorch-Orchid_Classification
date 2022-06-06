@@ -23,20 +23,6 @@ import pandas as pd
 from statistics import mode, StatisticsError
 import numpy
 
-
-def write_csv(data=None, csv_path=None, save_name='submission'):
-    if not os.path.exists(csv_path):
-        os.mkdir(csv_path)
-    fieldnames = ['filename', 'category']
-    with open(csv_path + "/" + save_name + '.csv', 'w', newline='') as f:
-        w = csv.writer(f)
-        w.writerow(fieldnames)
-        for i in range(len(data)):
-            name = data[i][0]
-            predict = int(data[i][1])
-            w.writerow([name, predict])
-    f.close()
-
 def csv_vote(csv_0, csv_1, csv_2, main: int=0):
 
     filename = pd.read_csv(csv_0)['filename']
