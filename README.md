@@ -70,7 +70,7 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
         | Best result         |      0.900077|
   
     - Leaderboard  
-    <img src = "https://i.imgur.com/rD35JEl.png" width="250">  
+    <img src = "https://i.imgur.com/rD35JEl.png" width="400">  
 
 - Private result: 
     - Best score 
