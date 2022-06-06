@@ -218,7 +218,183 @@ def build_model(model: str, pretrained: bool = True):
         raise Exception(
             "\nNo corresponding model! \nPlease enter the supported model: \n\n{}".format('\n'.join(models)))
 
+class EnsembleModel(nn.Module):
+    def __init__(self, classifiers, num_classes=219):
+        super(EnsembleModel, self).__init__()
 
+        # freeze all layers in all models
+        for model in classifiers:
+            for param in model.parameters():
+                param.requires_grad_(False)
+
+        [model_256, model_320_1, model_320_2, model_352, model_384_1, model_384_2, model_384_3,
+         model_384_4, model_384_5, model_384_6, model_384_7, model_480] = classifiers
+
+        self.model_256 = model_256
+        self.model_320_1 = model_320_1
+        self.model_320_2 = model_320_2
+        self.model_352 = model_352
+        self.model_384_1 = model_384_1
+        self.model_384_2 = model_384_2
+        self.model_384_3 = model_384_3
+        self.model_384_4 = model_384_4
+        self.model_384_5 = model_384_5
+        self.model_384_6 = model_384_6
+        self.model_384_7 = model_384_7
+        self.model_480 = model_480
+
+        # total 12 RN
+
+        num_models = len(classifiers)
+        self.num_models = num_models
+        self.num_classes = num_classes
+
+        self.model_1 = nn.ModuleList([nn.Linear(num_models, 1) for i in range(num_classes)])
+        self.model_2 = nn.Conv1d(in_channels=num_models, out_channels=num_models, kernel_size=1, groups=num_models,
+                                 bias=False)
+
+        # self.model_3 = nn.Linear(num_models * num_classes, num_classes)
+
+    def forward(self, x_256, x_320, x_352, x_384, x_480):
+        # batch size
+        batch = x_256.size(0)
+
+        # each preds
+        # [batch, classes] -> [batch, 1, classes]
+        pred_1 = self.model_256(x_256).unsqueeze(1)
+        pred_2 = self.model_320_1(x_320).unsqueeze(1)
+        pred_3 = self.model_320_2(x_320).unsqueeze(1)
+        pred_4 = self.model_352(x_352).unsqueeze(1)
+        pred_5 = self.model_384_1(x_384).unsqueeze(1)
+        pred_6 = self.model_384_2(x_384).unsqueeze(1)
+        pred_7 = self.model_384_3(x_384).unsqueeze(1)
+        pred_8 = self.model_384_4(x_384).unsqueeze(1)
+        pred_9 = self.model_384_5(x_384).unsqueeze(1)
+        pred_10 = self.model_384_6(x_384).unsqueeze(1)
+        pred_11 = self.model_384_7(x_384).unsqueeze(1)
+        pred_12 = self.model_480(x_480).unsqueeze(1)
+
+        all_preds = [pred_1, pred_2, pred_3, pred_4, pred_5, pred_6, pred_7, pred_8, pred_9, pred_10, pred_11, pred_12]
+
+        # concat
+        h = torch.cat(all_preds, dim=1)  # [batch, `models`, classes]
+
+        # 1 & 2 combined are Res-Ensemble Net
+
+        # 1
+        input_1 = h.view(self.num_classes, batch, self.num_models)  # [classes, batch, models]
+        output_1 = torch.empty((batch, self.num_classes)).to(h.device)  # initiate & .to()
+        for i, (input, model) in enumerate(zip(input_1, self.model_1)):  # loop through `classes`
+            x = model(input)  # [batch, 1]
+            x = x.squeeze(1)  # [batch]
+            output_1[:, i] = x
+
+        output_1 = F.relu(output_1)  # relu
+        # print(output_1.shape)
+
+        # 2
+        input_2 = h  # [batch, models, classes] for Conv1d format
+        output_2 = self.model_2(input_2)
+        output_2 = torch.sum(output_2, dim=1)
+        # print(output_2.shape)
+
+        # res
+        output_final = output_1 + output_2
+
+        return output_final
+
+class ModelsPredicts(nn.Module):
+    def __init__(self, classifiers, num_classes=219):
+        super(ModelsPredicts, self).__init__()
+
+        # freeze all layers in all models
+        for model in classifiers:
+            for param in model.parameters():
+                param.requires_grad_(False)
+
+        [model_256, model_320_1, model_320_2, model_352, model_384_1, model_384_2, model_384_3,
+         model_384_4, model_384_5, model_384_6, model_384_7, model_480] = classifiers
+
+        self.model_256 = model_256
+        self.model_320_1 = model_320_1
+        self.model_320_2 = model_320_2
+        self.model_352 = model_352
+        self.model_384_1 = model_384_1
+        self.model_384_2 = model_384_2
+        self.model_384_3 = model_384_3
+        self.model_384_4 = model_384_4
+        self.model_384_5 = model_384_5
+        self.model_384_6 = model_384_6
+        self.model_384_7 = model_384_7
+        self.model_480 = model_480
+
+    def forward(self, x_256, x_320, x_352, x_384, x_480):
+
+        # batch size
+        batch = x_256.size(0)
+
+        # each preds
+        # [batch, classes] -> [batch, 1, classes]
+        pred_1 = self.model_256(x_256).unsqueeze(1)
+        pred_2 = self.model_320_1(x_320).unsqueeze(1)
+        pred_3 = self.model_320_2(x_320).unsqueeze(1)
+        pred_4 = self.model_352(x_352).unsqueeze(1)
+        pred_5 = self.model_384_1(x_384).unsqueeze(1)
+        pred_6 = self.model_384_2(x_384).unsqueeze(1)
+        pred_7 = self.model_384_3(x_384).unsqueeze(1)
+        pred_8 = self.model_384_4(x_384).unsqueeze(1)
+        pred_9 = self.model_384_5(x_384).unsqueeze(1)
+        pred_10 = self.model_384_6(x_384).unsqueeze(1)
+        pred_11 = self.model_384_7(x_384).unsqueeze(1)
+        pred_12 = self.model_480(x_480).unsqueeze(1)
+
+        all_preds = [pred_1, pred_2, pred_3, pred_4, pred_5, pred_6, pred_7, pred_8, pred_9, pred_10, pred_11, pred_12]
+
+        # concat
+        h = torch.cat(all_preds, dim=1)  # [batch, `models`, classes]
+
+        return h
+    
+class PredictsEnsemble(nn.Module):
+    def __init__(self, num_models=2, num_classes=219):
+        super(PredictsEnsemble, self).__init__()
+
+        self.num_models = num_models
+        self.num_classes = num_classes
+
+        self.model_1 = nn.ModuleList([nn.Linear(num_models, 1) for i in range(num_classes)])
+        self.model_2 = nn.Conv1d(in_channels=num_models, out_channels=num_models, kernel_size=1, groups=num_models,
+                                 bias=False)
+
+    def forward(self, models_predicts):
+        # [batch, `models`, classes] = models_predicts
+
+        # batch size
+        batch = models_predicts.size(0)
+
+        # 1 & 2 combined are Res-Ensemble Net
+
+        # 1
+        input_1 = models_predicts.view(self.num_classes, batch, self.num_models)  # [classes, batch, models]
+        output_1 = torch.empty((batch, self.num_classes)).to(models_predicts.device)  # initiate & .to()
+        for i, (input, model) in enumerate(zip(input_1, self.model_1)):  # loop through `classes`
+            x = model(input)  # [batch, 1]
+            x = x.squeeze(1)  # [batch]
+            output_1[:, i] = x
+
+        output_1 = F.relu(output_1)  # relu
+        # print(output_1.shape)
+
+        # 2
+        input_2 = models_predicts  # [batch, models, classes] for Conv1d format
+        output_2 = self.model_2(input_2)
+        output_2 = torch.sum(output_2, dim=1)
+        # print(output_2.shape)
+
+        # res
+        output_final = output_1 + output_2
+
+        return output_final
 def build_ensemble_model(model: dict, pretrained: bool):
     """
     Args:
