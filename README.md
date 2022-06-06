@@ -33,6 +33,9 @@ pip install git+https://github.com/rwightman/pytorch-image-models.git
 pip install -r requirements.txt
 ```
 
+## Quick demo  
+
+
 ## Dataset  
 You can refer the [**README.md**](dataset/README.md) to prepare the dataset.  
 
@@ -63,6 +66,10 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 
 ## Predict result  
 - Public dataset:  
+
+<details>  
+<summary>Training tree...</summary>   
+  
     - Best score 
     
         |                     |  Accuracy    |
