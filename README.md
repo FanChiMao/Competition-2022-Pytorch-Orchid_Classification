@@ -87,5 +87,5 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 
 ## Contact us  
 - Chi-Mao Fan: qaz5517359@gmail.com  
-- Yu-Chen Su:  
+- Yu-Chen Su:  qqsunmoonstar@gmail.com
 - Wei-Hsiang Liao: zxc741852741@gmail.com
