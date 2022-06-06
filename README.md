@@ -1,5 +1,5 @@
 # Competition-2022-Pytorch-Orchid_Classification  
-## [Chi-Mao Fan](https://github.com/FanChiMao), [Yu-Chen Su](https://github.com/Modovado), [Wei-siang Liao](https://github.com/zxc741852741)  
+## [Chi-Mao Fan](https://github.com/FanChiMao), [Yu-Chen Su](https://github.com/Modovado), [Wei-Hsiang Liao](https://github.com/zxc741852741)  
 <a href="[https://imgur.com/mc4Di1O](https://tbrain.trendmicro.com.tw/Competitions/Details/20)"><img src="https://i.imgur.com/mc4Di1O.png" title="source: imgur.com" /></a>  
 
 - [尋找花中君子－蘭花種類辨識及分類](https://tbrain.trendmicro.com.tw/Competitions/Details/20)  
@@ -67,4 +67,4 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 ## Contact us  
 - Chi-Mao Fan: qaz5517359@gmail.com  
 - Yu-Chen Su:  
-- Wei-siang Liao  
+- Wei-Hsiang Liao: zxc741852741@gmail.com
