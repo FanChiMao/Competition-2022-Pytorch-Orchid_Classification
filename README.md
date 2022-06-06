@@ -88,6 +88,9 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
   
     - Leaderboard  
     
+</details>    
+  
+
 ## Reference  
 - https://github.com/rwightman/pytorch-image-models.git
 
