@@ -2,7 +2,7 @@
 # Setting for multiple classifier
 ##################################
 PATH:
-  INPUT_DIR: 'D:/PycharmProjects/orchid/dataset/dataset_category_split/test/0'
+  INPUT_DIR: './dataset/total_test'
   RESULT_DIR: './results'
 
 MODEL: # ['vit', 'beit', 'swin', 'convnext', 'volo', 'resmlp', 'xcit', 'ecaresnet50', 'ecaresnet269', 'dmnfnet', 'regnet', 'efficient']
