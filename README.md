@@ -66,7 +66,7 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 
 ## Predict result  
 <details>  
-<summary>Training tree...</summary>   
+<summary><strong>More details...</strong></summary>   
   
 - Public dataset:  
 
