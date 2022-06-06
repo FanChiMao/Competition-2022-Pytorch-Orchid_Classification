@@ -67,17 +67,14 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 ## Predict result  
 - Public dataset:  
 
-<details>  
-<summary>Training tree...</summary>   
-  
-  - Best score 
-    
-        |                     |  Accuracy    |
-        | ------------------- | :----------: |
-        | Best result         |      0.900077|
-  
-  - Leaderboard  
-    <img src = "https://i.imgur.com/rD35JEl.png" width="400">  
+    - Best score 
+
+          |                     |  Accuracy    |
+          | ------------------- | :----------: |
+          | Best result         |      0.900077|
+
+    - Leaderboard  
+      <img src = "https://i.imgur.com/rD35JEl.png" width="400">  
 
 - Private result: 
     - Best score 
