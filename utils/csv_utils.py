@@ -3,6 +3,8 @@ import os
 import pandas as pd
 import statistics
 from tqdm import tqdm
+from statistics import mode, StatisticsError
+import numpy
 
 
 def write_csv(data=None, csv_path=None, save_name='submission'):
@@ -17,11 +19,6 @@ def write_csv(data=None, csv_path=None, save_name='submission'):
             predict = data[i][1]
             w.writerow([name, predict])
     f.close()
-    import csv
-import os
-import pandas as pd
-from statistics import mode, StatisticsError
-import numpy
 
 def csv_vote(csv_0, csv_1, csv_2, main: int=0):
 
