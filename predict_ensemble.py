@@ -20,7 +20,8 @@ if __name__ == '__main__':
     out_dir = PATH['RESULT_DIR']
     os.makedirs(out_dir, exist_ok=True)
     files = natsorted(glob(os.path.join(inp_dir, '*.JPG')) + glob(os.path.join(inp_dir, '*.PNG')))
-
+    if len(files) == 0:
+        raise Exception(f"No testing images in {inp_dir}")
     ensemble_models = build_ensemble_model(model=MODEL, pretrained=False)
 
     print('==> Start predicting')
@@ -41,5 +42,5 @@ if __name__ == '__main__':
         class_predict = predicts.item()
         result.append([image_name, class_predict])
 
-    write_csv(data=result, csv_path=out_dir)
-    print('finish !')
+    write_csv(data=result, csv_path=out_dir, save_name='submission')
+    print(f'finish predicting! csv result is saved in {out_dir}')
