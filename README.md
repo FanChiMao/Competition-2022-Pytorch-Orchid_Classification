@@ -51,6 +51,7 @@ We support the code of three different ensemble methods as following:
   </tr>
 </table>
 </details>    
+
 However, due to the time limitation, we only use **Average ensemble** method to improve our performance. **Traditional ensemble** and **Resnet ensemble** cost about <u>8 hours</u> to test on 81710 images by our GTX GPU 1080Ti.😱  
 
 - Average ensemble  
