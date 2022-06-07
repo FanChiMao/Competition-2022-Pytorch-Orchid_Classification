@@ -79,4 +79,4 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 - Wei-Hsiang Liao: zxc741852741@gmail.com
 
 [^1]: General final score = 0.3xPublic + 0.7xPrivate  
-[^2]: Winner dependes on the baseline score where general final score > 0.79  
+[^2]: Winners depend on the baseline score where general final score > 0.79    
