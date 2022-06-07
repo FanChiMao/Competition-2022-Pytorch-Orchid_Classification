@@ -60,7 +60,7 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
         | ------------------- | :----------: | :----------: | :-----------------: |  
         | Best accuracy       |      0.900077|      0.780395|          0.816300277|  
   
-    Note: General final score = 0.3xPublic + 0.7xPrivate  
+        Note: General final score = 0.3xPublic + 0.7xPrivate  
           
 
 - Official final leaderboard  
