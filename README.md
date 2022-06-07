@@ -66,7 +66,7 @@ However, due to the time limitation, we only use **Average ensemble** method to 
 - Resnet ensemble  
   Train the res-ensemble net via running `faster_res_ensemble_train.py` and predict the output label using `faster_res_ensemble_test.py`.
 
-## Predict result  
+## Final result  
 <details>  
 <summary><strong>More details...</strong></summary>   
   
