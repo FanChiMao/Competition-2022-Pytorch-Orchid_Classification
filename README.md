@@ -35,6 +35,9 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 
 ## Ensemble strategy  
 We support the code of three different ensemble methods as following: 
+<details>  
+<summary><strong>Ensemble figures...</strong></summary>   
+  
 <table>
   <tr>
     <td> <img src = "https://i.imgur.com/g4GREcK.jpg" width="400"> </td>
@@ -47,7 +50,7 @@ We support the code of three different ensemble methods as following:
     <td><p align="center"><b>Resnet ensemble</b></p></td>
   </tr>
 </table>
-
+</details>    
 However, due to the time limitation, we only use **Average ensemble** method to improve our performance. **Traditional ensemble** and **Resnet ensemble** cost about <u>8 hours</u> to test on 81710 images by our GTX GPU 1080Ti.😱  
 
 - Average ensemble  
