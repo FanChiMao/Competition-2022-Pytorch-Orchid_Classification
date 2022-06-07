@@ -2,7 +2,7 @@
 ## TEAM_482: [Chi-Mao Fan](https://github.com/FanChiMao), [Yu-Chen Su](https://github.com/Modovado), [Wei-Hsiang Liao](https://github.com/zxc741852741)  
 
 - [**尋找花中君子－蘭花種類辨識及分類**](https://tbrain.trendmicro.com.tw/Competitions/Details/20)  
-<a href="[https://imgur.com/mc4Di1O](https://tbrain.trendmicro.com.tw/Competitions/Details/20)"><img src="https://i.imgur.com/mc4Di1O.png" title="source: imgur.com" /></a>  
+<a href="[https://imgur.com/mc4Di1O](https://imgur.com/Ubhj0LR)(https://tbrain.trendmicro.com.tw/Competitions/Details/20)"><img src="https://i.imgur.com/Ubhj0LR.png" title="source: imgur.com" /></a>  
 
 [![download](https://img.shields.io/github/downloads/FanChiMao/Competition-2022-Pytorch-Orchid_Classification/total)](https://github.com/FanChiMao/Competition-2022-Pytorch-Orchid_Classification/releases/tag/v0.0) ![visitors](https://visitor-badge.glitch.me/badge?page_id=FanChiMao/Orchid_AICUP) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TAlJB2QhbgE6fW-a3qph8bJr0blbQvzN?usp=sharing) [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/52Hz/Orchid_classification_AICUP)  
 
@@ -52,26 +52,20 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 <details>  
 <summary><strong>More details...</strong></summary>   
   
-- Public dataset:  
+- Score:  
 
     - Best score 
     
-        |                     |  Accuracy    |
-        | ------------------- | :----------: |
-        | Best result         |      0.900077|
+        |                     |  Public set  |  Private set |  General final score (0.3xPublic + 0.7xPrivate) |
+        | ------------------- | :----------: | :----------: | :---------------------------------------------: |
+        | Best accuracy       |      0.900077|      0.780395|    0.816300277|
 
-    - Leaderboard  
-      <img src = "https://i.imgur.com/rD35JEl.png" width="400">  
 
-- Private result: 
-    - Best score 
-    
-        |                     |  Accuracy    |
-        | ------------------- | :----------: |
-        | Best result         |     |
+- Official final leaderboard  
+    - PDF leaderboard: https://drive.google.com/file/d/1XEMtN1nZEf0kqwAbFIGAT0S_sKUQss-K/view?usp=sharing  
   
-    - Leaderboard  
-    
+    - 
+  
 </details>    
   
 
