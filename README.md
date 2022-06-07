@@ -51,11 +51,12 @@ We support the testing code of three different ensemble methods as following:
 However, due to the time limitation, we only use **Average ensemble** method to improve our performance. **Traditional ensemble** and **Resnet ensemble** cost about <u>8 hours</u> to test on 81710 images by our GTX GPU 1080Ti.😱  
 
 - Average ensemble  
-  Before predicting the results via **average ensemble**, please first check the parameters in [predict_ensemble.yaml](https://github.com/FanChiMao/Competition-2022-Pytorch-Orchid_Classification/blob/main/predict_ensemble.yaml) are all correctly set. And run:  
+  Before predicting the results via **average ensemble**, please first check the parameters in [predict_ensemble.yaml](https://github.com/FanChiMao/Competition-2022-Pytorch-Orchid_Classification/blob/main/predict_ensemble.yaml) are all correctly set. And directly run:  
   ```
-  python predict_ensemble.py --model model_name --input_dir images_folder_path --result_dir save_csv_here --weights path_to_models
+  python predict_ensemble.py
   ```
 
+- 
 
 
 ## Predict result  
@@ -63,9 +64,12 @@ However, due to the time limitation, we only use **Average ensemble** method to 
 <summary><strong>More details...</strong></summary>   
   
 - Score:  
-    - Best score  
+    - Public dataset: 0.900077  
+    - Private dataset: 0.780395  
+    - General final score[^1]: 0.816300277  
+    - Specific orchids: 0.961538807  
   
-        |                     |  Public set  |  Private set |  General final score[^1]|  
+        |                     |  Public set  |  Private set |  General final score|  
         | ------------------- | :----------: | :----------: | :-----------------: |  
         | Best accuracy       |      0.900077|      0.780395|          0.816300277|  
   
