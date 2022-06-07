@@ -34,7 +34,7 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 ```
 
 ## Ensemble strategy  
-We support the testing code of three different ensemble methods as following: 
+We support the code of three different ensemble methods as following: 
 <table>
   <tr>
     <td> <img src = "https://i.imgur.com/g4GREcK.jpg" width="400"> </td>
@@ -56,7 +56,10 @@ However, due to the time limitation, we only use **Average ensemble** method to 
   python predict_ensemble.py
   ```
 
-- 
+- Traditional ensemble  
+
+
+- Resnet ensemble  
 
 
 ## Predict result  
