@@ -63,11 +63,11 @@ However, due to the time limitation, we only use **Average ensemble** method to 
 <details>  
 <summary><strong>More details...</strong></summary>   
   
-- Score:  
-    - Public dataset: 0.900077  
-    - Private dataset: 0.780395  
-    - General final score[^1]: 0.816300277  
-    - Specific orchids: 0.961538807  
+- Score (accuracy)  
+    - Public dataset: 90.00%  
+    - Private dataset: 78.03%  
+    - General final score[^1]: 81.63%  
+    - Specific orchids: 96.15%  
   
         |                     |  Public set  |  Private set |  General final score|  
         | ------------------- | :----------: | :----------: | :-----------------: |  
