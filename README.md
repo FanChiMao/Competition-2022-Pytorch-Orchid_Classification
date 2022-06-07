@@ -60,13 +60,11 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
         | Best accuracy       |      0.900077|      0.780395|          0.816300277|  
   
 
-          
-
 - Official final leaderboard  
     - PDF leaderboard: https://drive.google.com/file/d/1XEMtN1nZEf0kqwAbFIGAT0S_sKUQss-K/view?usp=sharing  
     - Registration teams: 743  
     - Participating teams: 275  
-    - Our (TEAM_482) final rank: 18  
+    - Our (TEAM_482) final rank: 18-th[^2]  
   
 </details>    
   
@@ -80,5 +78,5 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 - Yu-Chen Su:  qqsunmoonstar@gmail.com
 - Wei-Hsiang Liao: zxc741852741@gmail.com
 
-## Notes  
 [^1]: General final score = 0.3xPublic + 0.7xPrivate  
+[^2]: Winner dependes on the baseline score where general final score > 0.79  
