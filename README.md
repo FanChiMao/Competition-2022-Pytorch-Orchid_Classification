@@ -53,20 +53,20 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 <summary><strong>More details...</strong></summary>   
   
 - Score:  
-
     - Best score  
   
-        |                     |  Public set  |  Private set |  General final score|  
+        |                     |  Public set  |  Private set |  General final score[^1]|  
         | ------------------- | :----------: | :----------: | :-----------------: |  
         | Best accuracy       |      0.900077|      0.780395|          0.816300277|  
   
-        Note: General final score = 0.3xPublic + 0.7xPrivate  
+
           
 
 - Official final leaderboard  
     - PDF leaderboard: https://drive.google.com/file/d/1XEMtN1nZEf0kqwAbFIGAT0S_sKUQss-K/view?usp=sharing  
-  
-    - 
+    - Registration teams: 743  
+    - Participating teams: 275  
+    - Our (TEAM_482) final rank: 18  
   
 </details>    
   
@@ -79,3 +79,6 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 - Chi-Mao Fan: qaz5517359@gmail.com  
 - Yu-Chen Su:  qqsunmoonstar@gmail.com
 - Wei-Hsiang Liao: zxc741852741@gmail.com
+
+## Notes  
+[^1]: General final score = 0.3xPublic + 0.7xPrivate  
