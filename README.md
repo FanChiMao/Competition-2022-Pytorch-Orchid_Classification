@@ -55,11 +55,12 @@ python predict.py --model model_name --input_dir images_folder_path --result_dir
 - Score:  
 
     - Best score 
+        Note: General final score = 0.3xPublic + 0.7xPrivate  
     
-        |                     |  Public set  |  Private set |  General final score (0.3xPublic + 0.7xPrivate) |
-        | ------------------- | :----------: | :----------: | :---------------------------------------------: |
-        | Best accuracy       |      0.900077|      0.780395|    0.816300277|
-
+        |                     |  Public set  |  Private set |  General final score|
+        | ------------------- | :----------: | :----------: | :--------------- -: |
+        | Best accuracy       |      0.900077|      0.780395|          0.816300277|
+    
 
 - Official final leaderboard  
     - PDF leaderboard: https://drive.google.com/file/d/1XEMtN1nZEf0kqwAbFIGAT0S_sKUQss-K/view?usp=sharing  
