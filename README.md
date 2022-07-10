@@ -84,7 +84,7 @@ However, due to the time limitation, we only use **Average ensemble** method to 
   
 
 - Official final leaderboard  
-    - PDF leaderboard: [leaderboard pdf](https://drive.google.com/file/d/1XEMtN1nZEf0kqwAbFIGAT0S_sKUQss-K/view?usp=sharing)  
+    - PDF leaderboard: [leaderboard pdf](https://drive.google.com/file/d/1gx3oWq4HYiNtvudT_r7Gu3XkcVNJQmB6/view?usp=sharing)  
     - Registration teams: 743  
     - Participating teams: 275  
     - Our (TEAM_482) final rank: 18-th[^2]  
