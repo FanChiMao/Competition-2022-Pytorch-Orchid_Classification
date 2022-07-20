@@ -4,3 +4,4 @@ matplotlib
 wget
 opencv-python
 tqdm
+pyyaml
