@@ -101,7 +101,9 @@ However, due to the time limitation, we only use **Average ensemble** method to 
 - Yu-Chen Su:  qqsunmoonstar@gmail.com  
 - Wei-Hsiang Liao: zxc741852741@gmail.com  
 
+![visitors](https://visitor-badge.glitch.me/badge?page_id=AICUP_2_github)  
+
 [^1]: General final score = 0.3xPublic + 0.7xPrivate  
 [^2]: Winners depend on the baseline score where general final score > 0.79  
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=AICUP_2_github)  
+
