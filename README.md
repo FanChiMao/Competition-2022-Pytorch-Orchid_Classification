@@ -97,7 +97,7 @@ However, due to the time limitation, we only use **Average ensemble** method to 
 
 
 ## Contact us  
-- Chi-Mao Fan: qaz5517359@gmail.com  
+- Chi-Mao Fan (leader): qaz5517359@gmail.com  
 - Yu-Chen Su:  qqsunmoonstar@gmail.com  
 - Wei-Hsiang Liao: zxc741852741@gmail.com  
 
