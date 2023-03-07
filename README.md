@@ -69,8 +69,6 @@ However, due to the time limitation, we only use **Average ensemble** method to 
   Train the res-ensemble net via running `faster_res_ensemble_train.py` and predict the output label using `faster_res_ensemble_test.py`.
 
 ## Final result  
-<details>  
-<summary><strong>More details...</strong></summary>   
   
 - Score (accuracy)  
     - Public dataset: 90.00%  
@@ -88,8 +86,6 @@ However, due to the time limitation, we only use **Average ensemble** method to 
     - Registration teams: 743  
     - Participating teams: 275  
     - Our (TEAM_482) final rank: 18-th[^2]  
-  
-</details>    
   
 
 ## Reference  
