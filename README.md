@@ -1,4 +1,4 @@
-# Competition-2022-Pytorch-Orchid_Classification  
+# [AICUP 2022] Competition-2022-Pytorch-Orchid_Classification  
 ## TEAM_482: [Chi-Mao Fan](https://github.com/FanChiMao), [Yu-Chen Su](https://github.com/Modovado), [Wei-Hsiang Liao](https://github.com/zxc741852741)  
 
 - [**尋找花中君子－蘭花種類辨識及分類**](https://tbrain.trendmicro.com.tw/Competitions/Details/20)  
